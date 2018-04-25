@@ -72,14 +72,14 @@ public class DBConfig {
 	    	return properties;
 	    }
 	    
-	    @Autowired
+	    /*@Autowired
 	    @Bean(name = "sessionFactory")
 	    public SessionFactory getSessionFactory(DataSource dataSource) {
 	    	LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
 	    	sessionBuilder.addProperties(getHibernateProperties());
 	    	sessionBuilder.addAnnotatedClasses(User.class);
 	    	return sessionBuilder.buildSessionFactory();
-	    }
+	    }*/
 	    
 	     @Autowired
 	    @Bean (name = "sessionFactory")

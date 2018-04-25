@@ -2,6 +2,8 @@ package com.niit.skillmapping.daoimpl;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,8 +13,9 @@ import org.springframework.stereotype.Repository;
 import com.niit.skillmapping.dao.UserDAO;
 import com.niit.skillmapping.model.User;
 
-@Component
-@Repository
+
+@Repository("userDAO")
+@Transactional
 public class UserDAOImpl implements UserDAO{
 	
 	@Autowired

@@ -1,0 +1,7 @@
+<div class="container">
+  <form novalidate [formGroup]="userForm" (ngSubmit)="onValidate()">
+    <input type="text" class="form-control" formControlName="email_id" />
+    <input type="password" class="form-control" formControlName="password">
+    <button type="submit" class="btn btn-primary" [disabled]="!userForm.valid">Submit</button>
+  </form>
+</div>

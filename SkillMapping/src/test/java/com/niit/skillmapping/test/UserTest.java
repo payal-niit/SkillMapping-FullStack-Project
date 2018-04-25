@@ -98,7 +98,7 @@ public class UserTest {
 		}*/
 	}
 
-	
+	@Ignore
 	@Test
 	public void getUserListTest() {
 		
@@ -160,7 +160,7 @@ public class UserTest {
 	 * userService.createUser(user); assertTrue("Test case Succeed", flag); } else {
 	 * flag = false; assertFalse("Test case failed", flag); } }
 	 */
-	
+	@Ignore
 	@Test
 	public void addUserTestTrue() {
 		Calendar cal = Calendar.getInstance();

@@ -13,7 +13,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Entity
 public class User {
 	@Id
-	//@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int user_id;
 	
 	@NotEmpty(message="Name is required")
@@ -22,19 +22,19 @@ public class User {
 	@NotEmpty(message="Name is required")
 	private String lname;
 	
-	@NotEmpty(message="Number is required")
-	@Pattern(regexp = "^([_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{1,6}))?$")
+	/*@NotEmpty(message="Number is required")
+	@Pattern(regexp = "^([_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{1,6}))?$")*/
 	private String email_id;
 	
-	@NotEmpty(message="phone number is required")
-	@Pattern(regexp = "\\d{10}")
+	/*@NotEmpty(message="phone number is required")
+	@Pattern(regexp = "\\d{10}")*/
 	private String phone_number;
 	
-	@NotEmpty(message="Password needs to be set")
-	@Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z]).{8,}$")
+	/*@NotEmpty(message="Password needs to be set")
+	@Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z]).{8,}$")*/
 	private String password;
 	private Date date_of_birth;
-	private boolean status = false;
+	private boolean status;
 	private int manager_id;
 	private int total_no_of_yrs_experience;
 	private int total_no_of_students_handled;
@@ -54,22 +54,7 @@ public class User {
 		this.total_no_of_students_handled = total_no_of_students_handled;
 	}
 
-	public User() {
-		
-	}
 	
-	public User(int user_id, String fname, String lname, String email_id, String phone_number, String password,
-			Date date_of_birth, boolean status, int manager_id) {
-		this.user_id = user_id;
-		this.fname = fname;
-		this.lname = lname;
-		this.email_id = email_id;
-		this.phone_number = phone_number;
-		this.password = password;
-		this.date_of_birth = date_of_birth;
-		this.status = status;
-		this.manager_id = manager_id;
-	}
 	public int getUser_id() {
 		return user_id;
 	}

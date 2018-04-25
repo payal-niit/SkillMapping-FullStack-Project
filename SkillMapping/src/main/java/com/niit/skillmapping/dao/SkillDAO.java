@@ -7,15 +7,12 @@ import com.niit.skillmapping.model.User;
 
 public interface SkillDAO {
 	
-	public List<User> getUserList();
-	public boolean createUser(User user);
-	public String getUserListByJSON();
-	public Skills getUserById(int user_id);
-	public Skills getUserByUsername(String username);
-	public List<Skills> getUserforActivation();
-	public List<Skills> getUserOnSearch(String fname);
-	public boolean getUserActivated(int user_id);
-	public boolean updateUser(User user);
-	public boolean deleteUser(int user_id);
+	public List<Skills> getSkillList();
+	public boolean createSkills(Skills skill);
+	public Skills getSkillById(int skill_id);
+	public Skills getSkillByName(String username);
+	
+	public boolean updateSkill(Skills skill);
+	public boolean deleteSkill(int skill_id);
 
 }

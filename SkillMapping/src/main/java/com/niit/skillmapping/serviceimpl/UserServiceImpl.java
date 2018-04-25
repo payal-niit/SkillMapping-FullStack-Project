@@ -16,7 +16,7 @@ import com.niit.skillmapping.service.UserService;
 public class UserServiceImpl implements UserService {
 
 	@Autowired
-	UserDAO userDAO;
+	private UserDAO userDAO;
 
 	public boolean createUser(User user) {
 		if (userDAO.getUserById(user.getUser_id()) != null) {

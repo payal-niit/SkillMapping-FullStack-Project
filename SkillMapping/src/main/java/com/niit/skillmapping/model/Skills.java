@@ -1,6 +1,8 @@
 package com.niit.skillmapping.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.hibernate.validator.constraints.NotEmpty;
@@ -8,6 +10,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Entity
 public class Skills {
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int skill_id;
 	
 	@NotEmpty(message = "Skill name cannot be empty")
